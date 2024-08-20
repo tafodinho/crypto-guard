@@ -65,6 +65,7 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem "rails_live_reload"
 end
 
 group :test do
@@ -73,3 +74,13 @@ group :test do
   gem "selenium-webdriver"
 
 end
+
+gem "devise", "~> 4.9"
+gem 'omniauth-google-oauth2'
+gem 'omniauth-coinbase'
+gem "omniauth-rails_csrf_protection"
+gem "stripe"
+gem 'sidekiq'
+gem 'net-http'
+gem 'whenever', require: false
+gem "dockerfile-rails", ">= 1.6", :group => :development

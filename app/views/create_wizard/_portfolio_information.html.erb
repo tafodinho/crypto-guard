@@ -1,0 +1,69 @@
+<div class="flex flex-col h-full">
+  <div
+    class="flex-none  bg-white border border-gray-200 mb-2 p-4 text-center text-blue-500 text-semi-bold"
+  >
+    <p>Portfolio Information</p>
+  </div>
+  <div class="flex flex-col h-[80vh]">
+    <div
+      class="flex grow flex-col h-[60vh] border border-gray-200 p-4 bg-white"
+    >
+      <div class="flex items-center mb-6 mt-2">
+        <span class="p-2 px-4 text-white bg-blue-500 rounded-full">3</span>
+        <p class="text-base text-gray-500 ml-6">Name and Describe Portfolio</p>
+      </div>
+      <div class="flex items-center justify-around">
+        <div class="flex items-center flex-col">
+          <span
+            class="px-6 py-1 rounded-full border border-blue-500 text-center mb-1"
+            >-2%</span
+          >
+          <p class="text-xs text-gray-400">Past Week</p>
+        </div>
+        <div class="flex items-center flex-col">
+          <span
+            class="px-6 py-1 rounded-full border border-blue-500 text-center mb-1"
+            >12%</span
+          >
+          <p class="text-xs text-gray-400">Past Month</p>
+        </div>
+        <div class="flex items-center flex-col">
+          <span
+            class="px-6 py-1 rounded-full border border-blue-500 text-center mb-1"
+            >25%</span
+          >
+          <p class="text-xs text-gray-400">Past Year</p>
+        </div>
+      </div>
+      <div class="relative max-h-full overflow-y-auto mt-4">
+        <div id="create-chart"></div>
+      </div>
+      <input
+        value="My portfolio"
+        class="w-52 self-center border-none text-center mb-2 mt-2"
+        type="text"
+      />
+      <input
+        value=""
+        class="w-64 self-center border-2 border-gray-200 text-center bg-gray-50"
+        type="text"
+        placeholder="Description"
+      />
+    </div>
+    <div
+      class="flex flex-col h-[20vh] border-2 bg-white shadow-sm border-gray-50 mt-2 p-4 text-center text-blue-500 text-semi-bold"
+    >
+      <div class="flex items-center mb-4 mt-2">
+        <span class="p-2 px-4 text-white bg-blue-500 rounded-full">3</span>
+        <p class="text-base text-gray-500 ml-6">Name and Describe Portfolio</p>
+      </div>
+
+      <button
+        type="button"
+        class="w-52 self-center text-white bg-blue-500 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300 font-medium text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+      >
+        Save Portfolio
+      </button>
+    </div>
+  </div>
+</div>

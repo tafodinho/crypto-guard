@@ -1,0 +1,15 @@
+<turbo-frame id="content">
+	<%= render "settings" do %>
+		<div class="p-8 mt-4 bg-white rounded-md">
+			<p class="uppercase font-semibold text-gray-700 mb-4 text-lg">Integrations</p>
+			<div class="grid grid-cols-3 gap-8 px-8">
+				<%= render 'settings/integrations/binance' %>
+				<%= render 'settings/integrations/kraken' %>
+				<%= render 'settings/integrations/coinbase' %>
+				<%= render 'settings/integrations/binance_us' %>
+				<%= render 'settings/integrations/bittrex' %>
+				<%= render 'settings/integrations/kucoin' %>
+			</div>
+		</div>
+	<% end %>
+</turbo-frame>

@@ -1,0 +1,89 @@
+<div class="grid grid-cols-4 gap-2">
+  
+  <%= link_to settings_account_path, class: "#{current_page?(settings_account_path) ? 'bg-blue-500 text-white' : 'bg-white'} flex flex-col items-center px-6 py-4 hover:bg-blue-500 hover:text-white hover:cursor-pointer rounded-md ", data: { turbo_frame: 'content', turbo_action: "advance" } do %>
+    <svg
+      class="w-6 h-6 dark:text-white"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 13 16h-2a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 12 21Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+      />
+    </svg>
+    <p class="mt-6">Account</p>
+  <% end %>
+
+  <%= link_to settings_subscription_path, class: "#{current_page?(settings_subscription_path) ? 'bg-blue-500 text-white' : 'bg-white'} flex flex-col items-center px-6 py-4 hover:bg-blue-500 hover:text-white hover:cursor-pointer rounded-md focus:bg-blue-500 active:bg-blue-500 focus:text-white active:text-white", data: { turbo_frame: 'content', turbo_action: "advance" } do %>
+    <svg
+      class="w-6 h-6 dark:text-white"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z"
+      />
+    </svg>
+    <p class="mt-6">Subscription</p>
+  <% end %>
+
+  <%= link_to settings_referal_path, class: "#{current_page?(settings_referal_path) ? 'bg-blue-500 text-white' : 'bg-white'} flex flex-col items-center bg-white px-6 py-4 hover:bg-blue-500 hover:text-white hover:cursor-pointer rounded-md focus:bg-blue-500 active:bg-blue-500 focus:text-white active:text-white", data: { turbo_frame: 'content', turbo_action: "advance" } do %>
+    <svg
+      class="w-6 h-6 dark:text-white"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M10 21v-9m3-4H7.5a2.5 2.5 0 1 1 0-5c1.5 0 2.875 1.25 3.875 2.5M14 21v-9m-9 0h14v8a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-8ZM4 8h16a1 1 0 0 1 1 1v3H3V9a1 1 0 0 1 1-1Zm12.155-5c-3 0-5.5 5-5.5 5h5.5a2.5 2.5 0 0 0 0-5Z"
+      />
+    </svg>
+    <p class="mt-6">Referal</p>
+ 
+ <% end %>
+ 
+  <%= link_to settings_integration_path, class: "#{current_page?(settings_integration_path) ? 'bg-blue-500 text-white' : 'bg-white'} flex flex-col items-center px-6 py-4 hover:bg-blue-500 hover:text-white hover:cursor-pointer rounded-md focus:bg-blue-500 active:bg-blue-500 focus:text-white active:text-white", data: { turbo_frame: 'content', turbo_action: "advance" } do %>
+    <svg
+      class="w-6 h-6 dark:text-white"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M8 7H5a2 2 0 0 0-2 2v4m5-6h8M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m0 0h3a2 2 0 0 1 2 2v4m0 0v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6m18 0s-4 2-9 2-9-2-9-2m9-2h.01"
+      />
+    </svg>
+    <p class="mt-6">Integrations</p>
+  
+  <% end %>
+  
+</div>

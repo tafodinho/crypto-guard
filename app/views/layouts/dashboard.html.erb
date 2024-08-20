@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CryptoInvest</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<%= csrf_meta_tags %>
+		<%= csp_meta_tag %>
+		<%=
+      stylesheet_link_tag 'tailwind', 'inter-font', 'data-turbo-track': 'reload'
+    %>
+		<%= stylesheet_link_tag 'application', 'data-turbo-track': 'reload' %>
+		<%= javascript_importmap_tags %>
+		<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+		<script src="https://js.stripe.com/v3/"></script>
+	</head>
+	<body class="bg-slate-100">
+		<main class="flex w-full ">
+			<% if flash[:notice] %>
+				<div class="fixed flex justify-around  w-full top-0  p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
+					<%= notice %>
+				</div>
+			<% end %>
+			<% if flash[:alert] %>
+				<div class="fixed flex justify-around  w-full top-0  p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+					<%= alert %>
+				</div>
+			<% end %>
+			<div class="h-[100vh] main flex justify-between w-full ">
+				<div class="sidebar w-2/12">
+					<%= render 'layouts/sidebar' %>
+				</div>
+				<div class="content w-10/12 h-[90%] mt-[85px]">
+					<%= yield %>
+				</div>
+			</div>
+			<%= render 'layouts/navbar' %>
+		</main>
+	</body>
+</html>

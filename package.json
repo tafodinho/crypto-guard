@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@prettier/plugin-ruby": "^1.6.1",
+    "apexcharts": "^3.49.1",
+    "flowbite": "^2.3.0",
+    "prettier": "^2.2.1",
+    "prettier-plugin-erb": "^0.4.0"
+  }
+}

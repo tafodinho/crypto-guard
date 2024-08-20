@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  coin: one
+  price: 9.99
+  volume: 1
+  market_cap: 9.99
+  time: 2024-07-19 11:31:42
+
+two:
+  coin: two
+  price: 9.99
+  volume: 1
+  market_cap: 9.99
+  time: 2024-07-19 11:31:42

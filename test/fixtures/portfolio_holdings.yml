@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  portfolio: one
+  coins: one
+  quantity: 1
+  target_percentage: 9.99
+
+two:
+  portfolio: two
+  coins: two
+  quantity: 1
+  target_percentage: 9.99

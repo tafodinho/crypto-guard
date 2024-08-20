@@ -1,0 +1,8 @@
+<div class="grid grid-cols-4 gap-4 mt-[-2px] px-4 w-full h-full">
+	<% 
+    @portfolios.each_with_index do |data, index| %>
+		<div><%= render partial: "portfolios/index_card", locals: { data: data, index: index } %></div>
+	<% end %>
+	<div id="portfolio-data" class="hidden" data-portfolio-data="<%= @portfolios.to_json %>">
+	</div>
+</div>

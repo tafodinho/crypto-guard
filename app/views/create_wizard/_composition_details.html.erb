@@ -1,0 +1,120 @@
+<div class="flex flex-col h-full">
+  <div
+    class="flex-none  bg-white border border-gray-200 mb-2 p-4 text-center text-blue-500 text-semi-bold"
+  >
+    <p>Composition Details</p>
+  </div>
+  <div
+    class="flex flex-col h-[80vh]  border border-gray-200 p-4 bg-white"
+  >
+    <div class="flex items-center mb-6 mt-2">
+      <span class="p-2 px-4 text-white bg-blue-500 rounded-full">2</span>
+      <p class="text-base text-gray-500 ml-6">Select Weighting Strategy</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <button
+        type="button"
+        class="w-52 text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium  text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+      >
+        Fixed
+      </button>
+      <button
+        type="button"
+        class="w-52 text-blue-500 bg-slate-200 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300 font-medium  text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+      >
+        Market Cap
+      </button>
+      <button
+        type="button"
+        class="w-52 text-blue-500 bg-slate-200 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300 font-medium  text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+      >
+        √Market Cap
+      </button>
+    </div>
+    <div class="relative max-h-full overflow-y-auto  mt-4">
+      <table
+        class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-200"
+      >
+        <tbody>
+          <% @coins.each do |coin| %>
+            <tr
+              class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700"
+            >
+              <th
+                scope="row"
+                class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white "
+              >
+                <%= coin[:coin_icon] %>
+                <%= coin[:coin] %>
+              </th>
+              <td class="px-4 py-2">
+                <div class="flex flex-col">
+                  <svg
+                    class="w-5 h-5 text-blue-500 dark:text-white hover:cursor-pointer hover:text-blue-700"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m5 15 7-7 7 7"
+                    />
+                  </svg>
+                  <svg
+                    class="w-5 h-5 text-blue-500 dark:text-white hover:cursor-pointer hover:text-blue-700"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m19 9-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+              </td>
+              <td class="px-4 py-2">1</td>
+              <td class="px-4 py-2">
+                <svg
+                  class="w-6 h-6 text-red-500 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m15 9-6 6m0-6 6 6m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  />
+                </svg>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <button
+      type="button"
+      class="w-52 self-center mt-6 text-white bg-blue-500 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300 font-medium  text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+    >
+      Backtest
+    </button>
+  </div>
+</div>
