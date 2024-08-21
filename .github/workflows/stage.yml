@@ -95,6 +95,11 @@ jobs:
           script: |
             echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
             cd crypto-guard
+            # Check if docker-compose.yml exists
+            if [ ! -f docker-compose.yml ]; then
+              echo "docker-compose.yml not found. Downloading from GitHub..."
+              wget https://raw.githubusercontent.com/${{ github.repository }}/${{ github.ref_name }}/docker-compose.yml
+            fi
             docker stop ${{ env.IMAGE_NAME }}
             docker rm ${{ env.IMAGE_NAME }}
             docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{env.IMAGE_TAG}}
