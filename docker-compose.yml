@@ -37,7 +37,7 @@ services:
     image: redis
 
   sidekiq:
-    build: .
+    image: opensnp/rails-sidekiq:latest
     command: bundle exec sidekiq
     environment:
       - RAILS_MASTER_KEY=$RAILS_MASTER_KEY
