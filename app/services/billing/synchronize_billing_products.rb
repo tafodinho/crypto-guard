@@ -1,4 +1,4 @@
-class SynchronizeBillingProducts
+class Billing::SynchronizeBillingProducts
   def call
     # First, we gather our existing products
     existing_products_by_stripeid = BillingProduct.all.each_with_object({}) do |product, acc|

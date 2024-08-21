@@ -1,4 +1,4 @@
-class SynchronizeBillingPlans
+class Billing::SynchronizeBillingPlans
   def call
     # First, we gather our existing plans
     existing_plans_by_stripeid = BillingPlan.all.each_with_object({}) do |plan, acc|
