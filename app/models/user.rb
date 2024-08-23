@@ -5,7 +5,7 @@ class User < ApplicationRecord
   
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
-         :trackable, :confirmable, :omniauthable, 
+         :trackable, :omniauthable, 
          omniauth_providers: [:google_oauth2, :coinbase]
 
   # def self.from_google(u)
@@ -33,7 +33,6 @@ class User < ApplicationRecord
       expires_at: Time.at(auth.credentials.expires_at),
       password: Devise.friendly_token[0, 20]
     )
-    log
     # If you use Devise and have email confirmation enabled
     user.skip_confirmation! if user.respond_to?(:skip_confirmation!)
 

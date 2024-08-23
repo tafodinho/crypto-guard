@@ -14,7 +14,6 @@
 	</div>
 	<div class="field">
 		<%= f.label :password_confirmation %><br />
-		<%= f.password_field :password_confirmation, autocomplete: "new-password" %>
 	</div>
 	<div class="actions">
 		<%= f.submit "Sign up" %>
@@ -66,12 +65,6 @@
 					</svg>
 					<%= f.password_field :password_confirmation, autocomplete: "new-password", class: "pl-2 w-full outline-none border-none", placeholder: "Confirm Password"  %>
 				</div>
-				<% if devise_mapping.rememberable? %>
-					<div class="field">
-						<%= f.check_box :remember_me %>
-						<%= f.label :remember_me, "keep me signed in", class: "text-gray-600 text-sm font-semibold" %>
-					</div>
-				<% end %>
 				<%= f.submit "Sign Up", class: "block w-full bg-indigo-600 mt-5 py-3 rounded-md hover:bg-indigo-700 hover:-translate-y-1 transition-all duration-500 text-white font-semibold mb-2" %>
 			<% end %>
 			<div class="relative flex py-5 items-center">
